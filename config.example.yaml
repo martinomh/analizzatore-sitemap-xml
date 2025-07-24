@@ -1,0 +1,21 @@
+# Esempio di configurazione per Analizzatore Sitemap XML
+# Copia questo file come config.yaml e modifica i valori
+
+# URL della sitemap da analizzare
+sitemap_url: "https://tuosito.com/sitemap.xml"
+
+# Pattern regex per identificare le pagine di categoria
+# Esempio: https://tuosito.com/it/nome-categoria/123/
+pattern_categoria: "/it/[^/]+/\\d{3}/$"
+
+# Pattern regex per identificare le pagine di prodotto
+# Esempio: https://tuosito.com/it/nome-produttore/nome-categoria/nome-prodotto/id-prodotto-123/
+pattern_prodotto: "/it/[^/]+/[^/]+/[^/]+/[^/]+/$"
+
+# Pattern regex per estrarre il nome della categoria dall'URL
+# Esempio: https://tuosito.com/it/nome-categoria/123/ -> nome-categoria
+pattern_estrai_categoria: "/it/([^/]+)/\\d{3}/$"
+
+# Pattern regex per estrarre il produttore dall'URL del prodotto
+# Esempio: https://tuosito.com/it/nome-produttore/nome-categoria/nome-prodotto/id-prodotto-123/ -> nome-produttore
+pattern_estrai_produttore: "/it/([^/]+)/[^/]+/[^/]+/[^/]+/$" 
